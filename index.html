@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  
+  body {
+  margin: 0px;
+  background: white;
+    
+ }
+  
+        header {
+            
+            display: flex;
+            align-items: center;
+            background: # wgite;
+            padding: 10px;
+        }
+
+        
+        .logo {
+            flex: 1;
+            font-size: 28px; 
+            font-weight: bold;
+          color: #FF7700;
+             text-align: center;
+          
+        }
+
+  
+  
+ .whatsapp-button {
+  display: block;
+  margin: auto;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+ text-decoration: none;
+ font-size: 17px;
+  font-weight: bold;
+   border-radius: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+   background: #25d366;
+  padding: 15px;
+  color: white;
+  margin-bottom: 20px; 
+ }
+  
+  
+  
+
+ 
+  
+
+ 
+  
+  /*slideshow*/
+.slideshow-container {
+ position: relative;
+ width: 100%;
+ height: 245px;
+ overflow: hidden;
+}
+
+.slide {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ 
+  width: 100%;
+ height: 100%
+}
+
+.slide img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+  
+  
+}
+
+.slide-caption {
+ position: absolute;
+ bottom: 10px;
+ left: 20px;
+ color: #fff;
+ text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.slide-caption h3 {
+ margin: 0px;
+ color: white;
+ font-size: 30px;
+}
+
+.slide-caption h4 {
+ margin: 5px 0 0;
+ color: #FFD334;
+ font-size: 20px;
+}
+
+.slide:first-child {
+ display: block;
+}
+
+/*fim do slideshow*/
+
+
+ .titulo {
+ font-size: 30px;
+ font-weight: bold; 
+ text-align: center;
+ margin-top: 30px;
+ padding-left: 3px;
+  padding-right: 3px;
+  margin-bottom: 19px;
+   
+ }
+  
+  
+  
+  
+  
+  
+  
+  
+        .produto {
+            text-align: center;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        .card-content {
+            /* Adicione estilos adicionais para o conteúdo do cartão, se necessário */
+        }
+
+        img.product-image {
+            max-width: 320px;
+            
+            margin-top: 10px;
+            border-radius: 10px; 
+          
+        }
+  
+  
+  
+  .product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black;
+  text-align: absolute;
+    
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+   margin-top: 10px;
+  
+ 
+  
+}
+  
+ .produto-descrição {
+ margin-top: 10px;
+ border-bottom: 1px solid #ccc;
+ padding: 10px;
+  color: black; 
+   margin-left: 20px;
+   margin-right: 20px;
+ }
+  
+  
+  
+  
+  
+  
+ .subtitulo {
+font-size: 21px;
+font-weight: bold;
+color: black;
+margin-top: 50px;
+margin-bottom: 30px;
+ text-align: abolute;
+ padding-left: 40px; 
+
+  
+}
+  
+
+  
+  
+   
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura da área visível da página para centralizar verticalmente */
+   
+}
+
+.card {
+    border: 1px solid #FF7700;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     
+}
+
+.texto {
+ font-weight: bold;
+ font-size: 19px;
+ color: #FF7700;
+  text-align: center;
+  
+  
+}
+
+.description {
+ margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+  
+   .pix {
+      
+     
+      padding: 16px;
+      width: 300px;
+      margin: 20px;
+      margin-top: 50px;
+     
+    }
+
+    .text {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+
+
+  
+  
+  
+  
+  footer {
+ background-color: #FFD334;
+ padding: 10px;
+ margin-top: 100px;
+}
+  
+
+ h4 {
+ margin-top: 18px;
+ font-size: 16px;
+ color: maroon;
+}
+  
+ p {  
+ margin-top: 10px;
+ font-size: 15px;
+ color: black;
+}
+   
+ .brand p {
+ font-size: 15px;
+ color: maroon;
+ margin-top: 50px;
+ text-align: center;
+}
+  
+  
+  
+  button {
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-reght: 50px;
+  margin-top: 50px;
+  background: #333;
+    
+ }
+  
+  
+  
+  
+ 
+ </style>
+</head>
+<body>
+    
+  <header>
+    <div class="logo">Lopixe</div>
+
+  </header>
+  
+  
+ <div class="slideshow-container">
+<div class="slide">
+<img src="imagen.png" alt="Imagem 1">
+<div class="slide-caption">
+<h3>Pizza</h3>
+<h4>R$ 18,99</h4>
+</div>
+</div>
+  
+<div class="slide">
+<img src="imagen.png">
+<div class="slide-caption">
+<h3>Pizza</h3>
+<h4>R$ 19,99</h4>
+</div>
+</div>
+<div class="slide">
+<img src="imagen.png">
+<div class="slide-caption">
+<h3>Pizza</h3>
+<h4>R$ 21,99</h4>
+</div>
+</div>
+  
+<div class="slide">
+<img src="images2.jpg">
+<div class="slide-caption">
+<h3>Pizza</h3>
+<h4>R$ 22,99</h4>
+</div>
+</div>
+</div>
+
+ <div class="titulo">Compre seu frango Pelo Menor Preço do Mercado</div>
+</div>
+ <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE" target="_blank">Fazer pedido</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+ <div class="produto">
+ <img class="product-image" src="frango.jpeg">
+<div class="product-content">
+  <div class="product-title">Peito fe frango seara</div>
+<span class="price-amount amount">R$ 20,99</span>
+ <div class="produto-descrição">Na bandeixa</div>
+  
+</div>
+ </div>
+  
+  
+
+
+    
+
+
+
+
+
+
+<div class="produto">
+ <img class="product-image" src="foto3.webp">
+ <div class="product-content">
+<div class="product-title">Tenis da nije original</div>
+<span class="price-amount amount">R$ 20,99</span>
+<div class="produto-descrição">Tamanho 39-40</div>
+  </div>
+</div>
+
+
+<div class="pix">
+<div class="text">Faça seu pedido pelo whatsappe e receba seu peito de frango em casa</div>
+  <div class="p">Aceitamos Pix e Catão de credito </div>
+</div>
+</div>
+
+<div class="card">
+        <div class="texto">Compra 100% segura</div>
+        <div class="description">Descrição do Card 2.</div>
+    </div>
+
+
+    <div class="card">
+        <div class="texto">Entrega rapida</div>
+        <div class="description">Descrição do Card 2.</div>
+    </div>
+
+    <div class="card">
+        <div class="texto">Frete gratis</div>
+        <div class="description">Descrição do Card 3.</div>
+    </div>
+  
+  <div class="card">
+        <div class="texto">Devolução</div>
+        <div class="description">Descrição do Card 3.</div>
+    </div>
+
+<div class="pix">
+<div class="text">Economize tempo indo nas supermercados</div>
+  <div class="p">Aceitamos Pix e Catão de credito </div>
+</div>
+</div>
+
+<div class="pix">
+<div class="text">Forma de pagamento</div>
+  <div class="p">Aceitamos Pix e Catão de credito </div>
+</div>
+</div>
+
+<footer>
+<div class="nome">
+<h4>Horario de funcionamento:</h4>
+     <p>Segunda a Sexta - das 8:00 as 17:30</p>
+<h4>Localização:</h4>
+     <p>Rio largo-AL</p>
+<div class="brand">
+     <p>&copy;2023°-Shoppin/ todos os direitos reservados.</p>
+</div>
+</footer>
+
+  
+  
+  
+  
+  <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var slides = document.querySelectorAll('.slide');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide, 3000);
+  function nextSlide() {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.display = 'block';
+  }
+});
+
+</script>
+
+
+  
+
+
+
+
+    
+
+
+
+
+
+
+
+<a href="pagar agora.html">Fazer pagamento</a>
+
+
+
+
+
+
+

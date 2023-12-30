@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <!-- Seu estilo CSS aqui -->
+</head>
+
+<body>
+  <!-- Seu conteúdo HTML aqui -->
+
+  <button onclick="downloadContent()">Baixar Conteúdo</button>
+
+  <script>
+    function downloadContent() {
+      // Substitua o conteúdo HTML e a lista de URLs conforme necessário
+      var htmlContent = document.documentElement.outerHTML;
+      var imageUrls = [
+        'index.html',
+        'images1.jpg',
+        // Adicione mais URLs conforme necessário
+      ];
+
+      var zip = new JSZip();
+
+      // Adicione o conteúdo HTML ao arquivo zip
+      zip.file('codigo_fonte.html', htmlContent);
+
+      // Obtenha todas as imagens
+      imageUrls.forEach(function (imageUrl, index) {
+        var filename = 'image' + index + '.' + imageUrl.split('.').pop();
+        zip.file(filename, fetch(imageUrl).then(response => response.blob()));
+      });
+
+      // Gere o arquivo zip
+      zip.generateAsync({
+        type: 'blob'
+      }).then(function (content) {
+        // Crie um link para download
+        var a = document.createElement('a');
+        var url = URL.createObjectURL(content);
+        a.href = url;
+        a.download = 'conteudo.zip';
+
+        // Simule um clique no link para iniciar o download
+        document.body.appendChild(a);
+        a.click();
+
+        // Limpe o link e a URL
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    }
+  </script>
+</body>
+
+</html>
